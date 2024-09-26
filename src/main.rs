@@ -1,7 +1,6 @@
 mod mass_storage;
 #[macro_use]
 mod log;
-//use log::{COLOR_DEBUG as COLOR_UNSELECTED, COLOR_INFO as COLOR_SELECTED, COLOR_RESET};
 use clap::Parser;
 mod args;
 mod util;
