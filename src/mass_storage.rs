@@ -188,7 +188,6 @@ impl Device {
         }
 
         pub fn storage_write(&self, data: &[u8], start: u32) -> usb::Result<Option<CommandStatus>> {
-                log::debug!("writing");
                 assert!((data.len() % 512) == 0);
                 let success = self.initiate_storage_transfer(Direction::HostToDevice, start, (data.len() / 512) as u16);
                 log::debug!("storage_write(): starting transfer, result: {:?}", success);
