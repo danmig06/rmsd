@@ -13,7 +13,7 @@ While this may sound more interesting than what more traditional ISO flasher pro
 
 - Building on Windows is possible, but usage is not what i'd consider practical, installing WinUSB for all Mass Storage Devices is required.
 
-- You will need to run the program with higher permissions (``sudo``), unless the user running the program has write access to the usb bus.
+- On Linux, you will need to run the program with higher permissions (``sudo``), unless the user running the program has write access to the usb bus.
 
 - All USB devices that can be used as a disk (i.e. are Mass Storage Class USB devices) should be supported, as they all communicate the same way, as such, the driver implements only this common protocol (Bulk Only, also referred as "BBB"), as noted by many documents that describe this protocol, the only type of devices that do not use it are USB Floppy Disk readers and thus will not be detected.
 
