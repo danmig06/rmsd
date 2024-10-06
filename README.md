@@ -1,5 +1,5 @@
 # rmsd
-USB Mass Storage Device flasher/cloner for Linux, macOS and Windows
+USB Mass Storage Device flasher/cloner for all *NIX Operating Systems.
 
 # What is it?
 *rmsd* is a fast and lightweight utility written completely in memory-safe rust, it comes with its own small userland driver designed to interact directly with USB flash drives and other devices that offer mass storage capabilities (such as external HDDs).
@@ -11,7 +11,9 @@ While this may sound more interesting than what more traditional ISO flasher pro
 # General Notes
 (Please note that currently **all tests were carried out on Linux**)
 
-- On Linux, you will need to run the program with higher permissions (``sudo``), unless the user running the program has write access to the usb bus.
+- Building on Windows is possible, but usage is not what i'd consider practical, installing WinUSB for all Mass Storage Devices is required.
+
+- You will need to run the program with higher permissions (``sudo``), unless the user running the program has write access to the usb bus.
 
 - All USB devices that can be used as a disk (i.e. are Mass Storage Class USB devices) should be supported, as they all communicate the same way, as such, the driver implements only this common protocol (Bulk Only, also referred as "BBB"), as noted by many documents that describe this protocol, the only type of devices that do not use it are USB Floppy Disk readers and thus will not be detected.
 
